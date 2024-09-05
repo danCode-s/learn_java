@@ -34,10 +34,35 @@ public class recursionPt1 {
         return factorial;
         
     }
+
+
+    // print the fibonnaci series till nth term. a, b,  --> c=a+b.
+
+    public static void fibonnaciSeries(int a, int b, int n){
+        // a = 2nd last term
+        // b = last term.
+
+        if(n == 0){
+            return;            
+        }
+
+        int c = a + b;
+        System.out.println(c);
+        fibonnaciSeries(b, c, n - 1);
+        
+    }
     public static void main(String args[]){
         printNumbers(1);
         naturalSum(1, 5, 0);
-        System.out.println(factorial(5)); 
+        System.out.println(factorial(5));
+        
+        int a = 0;
+        int b = 1;
+        System.out.println(a);
+        System.out.println(b);
+        int n = 7;
+        fibonnaciSeries(a, b, n);
+
 
     }
 }
