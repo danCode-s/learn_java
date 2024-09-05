@@ -51,6 +51,22 @@ public class recursionPt1 {
         fibonnaciSeries(b, c, n - 1);
         
     }
+
+    // print x^n(stack height = n)
+
+    public static int exponetial(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+        if(x == 0){
+            return 0;
+        }
+        int xnew = exponetial(x, n-1);
+        int xpown = x * xnew;
+        return xpown;
+        
+        
+    }
     public static void main(String args[]){
         printNumbers(1);
         naturalSum(1, 5, 0);
@@ -63,6 +79,8 @@ public class recursionPt1 {
         int n = 7;
         fibonnaciSeries(a, b, n);
 
+
+        System.out.println(exponetial(2, 3));
 
     }
 }
