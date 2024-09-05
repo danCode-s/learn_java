@@ -24,10 +24,20 @@ public class recursionPt1 {
         naturalSum(i+1, n, sum);
 
     }
-
+    // print factorial of a number n
+    public static long factorial(int n){ // long used since factorials tend to be very long ;)
+        
+        if(n == 1 || n == 0){
+            return 1;
+        }
+        long factorial = n * factorial(n - 1);
+        return factorial;
+        
+    }
     public static void main(String args[]){
         printNumbers(1);
         naturalSum(1, 5, 0);
+        System.out.println(factorial(5)); 
 
     }
 }
